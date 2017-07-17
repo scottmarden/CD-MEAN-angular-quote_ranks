@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+   Quote under construction: {{ quote | json }}
+   <br />
+   Quote list: {{ quotes | json }}
+</div>
+<app-add [quote]="quote" (quoteEmitter)="addQuote($event)"></app-add>
+<app-list [(quotesList)]="quotes" (voteEmitter)="newRating($event)"></app-list>

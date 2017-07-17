@@ -1,0 +1,11 @@
+<h1>Quotes List</h1>
+
+<h4 *ngIf = "quotesList.length < 1">Be the first to add a quote!</h4>
+
+<div *ngFor="let quote of quotesList" class="quote">
+	<h2>"{{ quote.content }}"</h2>
+	<h4>--{{ quote.author }}</h4>
+	<h4>Rating: {{ quote.rating }}</h4>
+	<button (click)="voteUp(quote)">Vote Up</button>
+	<button (click)="voteDown(quote)">Vote Down</button>
+</div>
